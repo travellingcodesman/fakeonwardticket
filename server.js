@@ -5,10 +5,11 @@ if (process.env.NODE_ENV !== 'production') {
 const express = require("express")
 const app = express()
 const expressLayouts = require('express-ejs-layouts')
+const axios = require('axios').default
 
 const indexRouter = require('./routes/index')
 const searchRouter = require('./routes/searchresults')
-const passengerRouter = require('./routes/passanger')
+const passengerRouter = require('./routes/passenger')
 const paymentRouter = require('./routes/payment')
 const confirmationRouter = require('./routes/confirmation')
 
@@ -29,7 +30,7 @@ app.use(express.json())
 
 app.use('/', indexRouter)
 app.use('/searchresults', searchRouter)
-app.use('/passanger', passengerRouter)
+app.use('/passenger', passengerRouter)
 app.use('/payment', paymentRouter)
 app.use('/confirmation', confirmationRouter)
 

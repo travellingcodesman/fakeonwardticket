@@ -3,7 +3,7 @@ const router = express.Router()
 
 // Passenger Form
 router.get('/', (req, res) => {
-    res.render('passanger/index')
+    res.render('passenger/index')
 })
 
 module.exports = router
