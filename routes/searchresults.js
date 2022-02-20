@@ -2,14 +2,20 @@ const express = require('express')
 const axios = require('axios').default
 const router = express.Router()
 
+
+
+
 //Search results page
 router.get('/', (req, res) =>  {
     var departure = req.query.departure
     var arrival = req.query.arrival
-    var departdate = req.query.departdate
+    var date = req.query.date
+    var departtime
+    var arrivetime
+    var flightnumber
     const sendGetRequest = async (url, params) => {
         try {
-            const resp = await axios.get(url, {headers: params})
+            const resp = await axios.get(url, {header: params})
             const apiResp = await resp.data
             console.log(apiResp)
         } catch (err) {
@@ -21,9 +27,8 @@ router.get('/', (req, res) =>  {
     const params = {
         access_key: 'VQESGEm6Hhu2El2yrk3vGLPM_hP_DwBM'
     }
-    sendGetRequest()    
-    res.render('searchresults/index', {query: req.query})
-    
+    res.render('searchresults/index', {query: req.query, departtime : departtime, arrivetime: arrivetime, flightnumber: flightnumber})
+    sendGetRequest()
 })
 
 module.exports = router
