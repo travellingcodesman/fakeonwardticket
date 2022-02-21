@@ -28,15 +28,16 @@ const tripSchema = new mongoose.Schema({
         required: true,
         minlength: 3,
         maxlength: 3
-    },
-    departurecity: {
-        type: String,
-        required: true
-    },
-    departdate: {
-        type: Date,
-        required: true
     }
+    //  departurecity: {
+    //     type: String,
+    //     required: true
+    // },
+    // departdate: {
+    //     type: Date,
+    //     required: true
+    
+    // }
 })
 
 module.exports = mongoose.model('trip', tripSchema)

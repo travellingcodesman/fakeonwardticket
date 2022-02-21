@@ -1,8 +1,7 @@
 const express = require('express')
 const axios = require('axios').default
 const router = express.Router()
-
-
+const { query } = require('express')
 
 
 //Search results page
@@ -10,9 +9,9 @@ router.get('/', (req, res) =>  {
     var departure = req.query.departure
     var arrival = req.query.arrival
     var date = req.query.date
-    var departtime
-    var arrivetime
-    var flightnumber
+    var departtime = 'n/a'
+    var arrivetime = 'n/a'
+    var flightnumber = 'n/a'
     const sendGetRequest = async (url, params) => {
         try {
             const resp = await axios.get(url, {header: params})
