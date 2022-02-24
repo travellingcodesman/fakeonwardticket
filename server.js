@@ -6,6 +6,7 @@ const express = require("express")
 const app = express()
 const expressLayouts = require('express-ejs-layouts')
 const axios = require('axios').default
+const apiSearch = require('./public/javascript/middleware/apiSearch.js')
 
 
 const indexRouter = require('./routes/index')

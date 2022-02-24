@@ -37,26 +37,26 @@ const tripSchema = new mongoose.Schema({
         minlength: 3,
         maxlength: 3
     },
-    // departurecity: {
-    //     type: String,
-    //     required: true
-    // },
-    // arrivalcity: {
-    //     type: String,
-    //     required: true
-    // },
-    // departtime: {
-    //     type: Date,
-    //     required: true
-    // },
-    // arrivetime: {
-    //     type: Date,
-    //     required: true 
-    // },
-    // flightnumber: {
-    //     type: String,
-    //     required: true
-    // }
+    departurecity: {
+        type: String,
+        required: true
+    },
+    arrivalcity: {
+        type: String,
+        required: true
+    },
+    departtime: {
+        type: Date,
+        required: true
+    },
+    arrivetime: {
+        type: Date,
+        required: true 
+    },
+    flightnumber: {
+        type: String,
+        required: true
+    }
 })
 
 module.exports = mongoose.model('trip', tripSchema)
