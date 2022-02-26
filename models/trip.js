@@ -14,11 +14,11 @@ const tripSchema = new mongoose.Schema({
         required: true
     },
     departdate: {
-        type: Date,
+        type: String,
         required: true    
     },
     bookingdate: {
-        type: Date,
+        type: String,
         required: true
     },
     email: {
@@ -46,11 +46,11 @@ const tripSchema = new mongoose.Schema({
         required: true
     },
     departtime: {
-        type: Date,
+        type: String,
         required: true
     },
     arrivetime: {
-        type: Date,
+        type: String,
         required: true 
     },
     flightnumber: {

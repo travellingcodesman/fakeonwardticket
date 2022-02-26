@@ -1,5 +1,5 @@
 <% for( let i = 0; i < resultsLength; i++ ) { %>
-<a href="/passenger?departurecode=<%= departurecode %>departurecity=<%= departurecity[i] %>&arrivalcode=<%= arrivalcode %>&arrivalcity=<%= arrivalcity[i] %>&flightnumber=<%= flightnumber[i] %>&departtime=<%= departtime[i] %> &arrivetime=<%= arrivetime[i] %> ">
+<a href="/passenger?departurecode=<%= departurecode %>&departurecity=<%= departurecity[i] %>&arrivalcode=<%= arrivalcode %>&arrivalcity=<%= arrivalcity[i] %>&flightnumber=<%= flightnumber[i] %>&departtime=<%= departtime[i] %> &arrivetime=<%= arrivetime[i] %> ">
     <div id=<% `opt${i}` %>   class="options">
         <%= departurecode %>
         <%= departurecity[i] %>

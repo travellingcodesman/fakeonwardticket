@@ -29,6 +29,9 @@ db.on('error', error => console.error(error))
 db.once('open', () => console.log('Connected to Mongoose'))
 
 app.use(express.json())
+app.use(express.urlencoded({
+    extended: true
+}))
 
 app.use('/', indexRouter)
 app.use('/searchresults', searchRouter)
