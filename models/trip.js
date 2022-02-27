@@ -56,7 +56,19 @@ const tripSchema = new mongoose.Schema({
     flightnumber: {
         type: String,
         required: true
+    }, 
+    price: {
+        type: Number,
+        required: true
+    },
+    bookingnumber: {
+        type: Number,
+        required: true
+    },
+    airlinereference: {
+        type: String,
+        required: true
     }
 })
 
-module.exports = mongoose.model('trip', tripSchema)
+module.exports = mongoose.model('Trip', tripSchema)
