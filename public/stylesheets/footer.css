@@ -1,0 +1,16 @@
+.flexlogos {
+    display: flex;
+    justify-content:space-evenly;
+}
+
+.logos {
+
+    width: 240px;
+    height: 240px;
+}
+
+#bottomstuff {
+    height: 140px;
+    background-color:cadetblue;
+
+}

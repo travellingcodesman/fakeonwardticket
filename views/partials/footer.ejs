@@ -1,3 +1,38 @@
-<footer>
-    <span>Bottom banner</span> 
-</footer>
+<link rel="stylesheet" href="/stylesheets/footer.css">
+
+<div class="flexlogos">
+    <div class="logos">
+        <img src="Images/Singapore_Airlines.svg" height="200px" width="200px">
+    </div>
+    <div class="logos">
+        <img src="Images/airasialogo.svg" height="200px" width="200px">
+    </div>
+    <div class="logos">
+        <img src="Images/Thai_Airways_Logo.svg" height="200px" width="200px">
+    </div>
+    <div class="logos">
+        <img src="Images/United_Airlines_Logo.svg" height="200px" width="200px">
+    </div>
+    <div class="logos">
+        <img src="Images/Southwest_Airlines_logo_2014.svg" height="200px" width="200px">
+    </div>
+    <div class="logos">
+        <img src="Images/Japan_Airlines_Logo_(2011).svg" height="200px" width="200px">
+    </div>
+</div>
+<script>
+    const logosize = document.querySelectorAll(".logos img")
+    logosize.forEach(el => el.addEventListener("mouseover", e => {
+        el.style.height = "240px";
+        el.style.width = "240px";
+    }))
+    logosize.forEach(el => el.addEventListener("mouseout", e => {
+        el.style.height = "220px";
+        el.style.width = "220px";
+    }))
+</script>
+<div id="bottomstuff">
+    <div>
+
+    </div>
+</div>
