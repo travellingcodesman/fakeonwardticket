@@ -7,13 +7,14 @@ const app = express()
 const expressLayouts = require('express-ejs-layouts')
 const axios = require('axios').default
 const apiSearch = require('./public/javascript/middleware/apiSearch.js')
-const paypal = require('paypal-rest-sdk')
+const paypal = require('@paypal/checkout-server-sdk')
+if (process.env.NODE_ENV === 'production') {
+    const Environment = paypal.core.LiveEnvironment
+} else {
+    const Environment = paypal.core.SandboxEnvironment
+}
+const paypalClient = new paypal.core.PayPalHttpClient(new Environment(process.env.PAYPAL_CLENT_ID, process.env.PAYPAL_CLIENT_SECRET))
 
-paypal.configure({
-    'mode': 'sandbox', //sandbox or live
-    'client_id': process.env.PAYPAL_CLIENT_ID,
-    'client_secret': process.env.PAYPAL_CLIENT_SECRET
-  });
 
 const indexRouter = require('./routes/index')
 const searchRouter = require('./routes/searchresults')
