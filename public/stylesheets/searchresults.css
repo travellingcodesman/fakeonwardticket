@@ -1,0 +1,13 @@
+
+.infobox {
+    position: relative;
+    top: 00px;
+    width: 500px;
+    height: 500px;
+    border: 1px cadetblue solid;   
+    background-color: white; 
+    margin: auto;
+    box-shadow: 3px 5px #ced1d3e8;
+    border-radius: 25px;
+    z-index: 3;
+}

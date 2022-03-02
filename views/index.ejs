@@ -1,31 +1,34 @@
-<h2>Flight Details</h2>
-<form action="/searchresults" method="Get">
-    <input autocomplete="off" list="airports" id="input" name="departure" placeholder="From?">
-        <datalist id="departure" required>
-            <option value="BKK">Bangkok(BKK)</option>
-            <option value="SFO">San Francisco(SFO)</option>
-            <option value="LAX">Los Angeles(LAX)</option>
-            <option value="SIN">Singapore(SIN)</option>
-            <option value="SGN">Ho Chi Minh City(SGN)</option>
-            <option value="KUL">Kuala Lumpur(KUL)</option>
-            <option value="JFK">New York City(JFK)</option>
-            <option value="LHR">London(LHR)</option>
-            <option value="CAN">Guangzhou(CAN)</option>                            
+<link rel="stylesheet" href="/stylesheets/index.css">
+<div class="infobox">
+    <h2>Flight Details</h2>
+    <form action="/searchresults" method="Get">
+        <input autocomplete="off" list="" id="input" name="departure" placeholder="From?">
+            <datalist id="departure" required>
+                <option value="BKK">Bangkok(BKK)</option>
+                <option value="SFO">San Francisco(SFO)</option>
+                <option value="LAX">Los Angeles(LAX)</option>
+                <option value="SIN">Singapore(SIN)</option>
+                <option value="SGN">Ho Chi Minh City(SGN)</option>
+                <option value="KUL">Kuala Lumpur(KUL)</option>
+                <option value="JFK">New York City(JFK)</option>
+                <option value="LHR">London(LHR)</option>
+                <option value="CAN">Guangzhou(CAN)</option>                            
 
-        </datalist>    
-    <input autocomplete="off" list="airports" id="input" name="arrival" placeholder="To where?">
-        <datalist id="arrival" required>
-            <option value="BKK">Bangkok(BKK)</option>
-            <option value="SFO">San Francisco(SFO)</option>
-            <option value="LAX">Los Angeles(LAX)</option>
-            <option value="SIN">Singapore(SIN)</option>
-            <option value="SGN">Ho Chi Minh City(SGN)</option>
-            <option value="KUL">Kuala Lumpur(KUL)</option>
-            <option value="JFK">New York City(JFK)</option>
-            <option value="LHR">London(LHR)</option>
-            <option value="CAN">Guangzhou(CAN)</option>                            
+            </datalist>    
+        <input autocomplete="off" list="" id="input" name="arrival" placeholder="To where?">
+            <datalist id="arrival" required>
+                <option value="BKK">Bangkok(BKK)</option>
+                <option value="SFO">San Francisco(SFO)</option>
+                <option value="LAX">Los Angeles(LAX)</option>
+                <option value="SIN">Singapore(SIN)</option>
+                <option value="SGN">Ho Chi Minh City(SGN)</option>
+                <option value="KUL">Kuala Lumpur(KUL)</option>
+                <option value="JFK">New York City(JFK)</option>
+                <option value="LHR">London(LHR)</option>
+                <option value="CAN">Guangzhou(CAN)</option>                            
 
-        </datalist>
-        <input type="date" name="departdate" id="departdate" required>
-    <button type="submit">Search</button>
-</form>
+            </datalist>
+            <input type="date" name="departdate" id="departdate" required>
+        <button type="submit">Search</button>
+    </form>   
+</div>

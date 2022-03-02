@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="/stylesheets/searchresults.css">
+<div class="infobox">
 <% for( let i = 0; i < resultsLength; i++ ) { %>
 <a href="/passenger?departurecode=<%= departurecode %>&departurecity=<%= departurecity[i] %>&arrivalcode=<%= arrivalcode %>&arrivalcity=<%= arrivalcity[i] %>&departdate=<%= departdate %>&flightnumber=<%= flightnumber[i] %>&departtime=<%= departtime[i] %>&arrivetime=<%= arrivetime[i] %>&price=<%= price[i] %> ">
     <div id=<% `opt${i}` %>   class="options">
@@ -14,6 +16,6 @@
 </a>
 
 <%    } %>
-
+</div>
 
 

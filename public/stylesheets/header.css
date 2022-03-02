@@ -18,3 +18,16 @@ header {
     font-family: monospace;
     font-size: 25px;
 }
+
+#backgroundimage {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    z-index: 2;
+}
+
+.parentdiv {
+    position: relative;
+    z-index: 1
+}
+
