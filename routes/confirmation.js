@@ -2,6 +2,10 @@ const express = require('express')
 const router = express.Router()
 const paypalClient = require('../server')
 
+const storeItems = new Map([
+    [1, {price: 4, name: "Onward Ticket and Confirmation"}]
+])
+
 //Confirmation page
 router.get('/', (req, res) => {
     res.render('confirmation/index')
@@ -25,11 +29,11 @@ router.post('/', async (req, res) => {
                 },
                 items: [
                     {
-                        name: "Onward Ticket and Confirmation",
+                        name: storeItems.name,
                         description: "",
                         unit_amount: {
                             currency_code: "USD",
-                            value: "4"
+                            value: storeItems.price
                         },
                         quantity: "100000"
                     }
