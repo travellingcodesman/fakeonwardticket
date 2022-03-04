@@ -5,9 +5,9 @@ const randbookrefer = require('../public/javascript/randbookrefer')
 
 
 //Payment page
-router.get('/', (req, res) => {
-    res.render('payment/index')
-})
+// router.get('/', (req, res) => {
+//     res.render('payment/index')
+// })
 
 router.post('/', async (req, res) => {
     randombooking = randbookrefer()

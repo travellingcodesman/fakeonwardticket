@@ -1,7 +1,7 @@
 const axios = require('axios').default
 
 const apiSearch = async (req, res, next) => {
-    res.departurecode = req.query.departure.toLocaleUpperCase()
+    res.departurecode = req.query.departure.toUpperCase()
     res.arrivalcode = req.query.arrival.toUpperCase()
     const datearray = req.query.departdate.split('-')
     res.departdate = `${datearray[2]}/${datearray[1]}/${datearray[0]}`
