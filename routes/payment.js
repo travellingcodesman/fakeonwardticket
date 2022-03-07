@@ -4,10 +4,10 @@ const Trip = require('../models/trip')
 const randbookrefer = require('../public/javascript/randbookrefer')
 
 
-//Payment page
-// router.get('/', (req, res) => {
-//     res.render('payment/index')
-// })
+// Payment page
+router.get('/', (req, res) => {
+    res.render('payment/index')
+})
 
 router.post('/', async (req, res) => {
     randombooking = randbookrefer()

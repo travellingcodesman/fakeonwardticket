@@ -1,11 +1,9 @@
-
-<script src="https://www.paypal.com/sdk/js?client-id=<%= paypalClientId %>&currency=USD"></script>
-<script src="/public/javascript/paypal.js" defer></script>
 <link rel="stylesheet" href="/stylesheets/payment.css">
-<script>
-    paypal.Buttons().render('#paypal')
-</script>
+
+<script src="https://www.paypal.com/sdk/js?client-id=AQYN00hNnz6JCNBjU1Prt8iKkpYl5HlA_T1wjoylj8VyUunXIlkbP_g0zWIP1TR3rxamitzMTsFQh7LE&currency=USD"></script>
+<script src="/public/javascript/paypal.js" defer></script>
+
 <div class="infobox">
     <h2>Verify information here</h2>
-    <div id="paypal"></div>
+    <div id="paypal-button-container"></div>
 </div>

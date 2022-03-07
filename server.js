@@ -1,18 +1,12 @@
-if (process.env.NODE_ENV !== 'production') {
-    require('dotenv').config();
-}
+require('dotenv').config();
+
 
 const express = require("express")
 const app = express()
 const expressLayouts = require('express-ejs-layouts')
-const axios = require('axios').default
+const axios = require('axios')
+const fetch = require('node-fetch')
 const apiSearch = require('./public/javascript/middleware/apiSearch.js')
-const paypal = require('@paypal/checkout-server-sdk')
-const Environment = process.env.NODE_ENV === 'production'
-    ? paypal.core.LiveEnvironment
-    : paypal.core.SandboxEnvironment
-
-const paypalClient = new paypal.core.PayPalHttpClient(new Environment(process.env.PAYPAL_CLENT_ID, process.env.PAYPAL_CLIENT_SECRET))
 
 
 const indexRouter = require('./routes/index')
@@ -20,6 +14,8 @@ const searchRouter = require('./routes/searchresults')
 const passengerRouter = require('./routes/passenger')
 const paymentRouter = require('./routes/payment')
 const confirmationRouter = require('./routes/confirmation')
+const paypalRouter = require('./routes/paypalapi')
+
 
 app.set('view engine', 'ejs')
 app.set('views', __dirname + '/views')
@@ -44,6 +40,8 @@ app.use('/searchresults', searchRouter)
 app.use('/passenger', passengerRouter)
 app.use('/payment', paymentRouter)
 app.use('/confirmation', confirmationRouter)
+app.use('/api', paypalRouter)
+
 
 app.listen(process.env.PORT || 3000)
 

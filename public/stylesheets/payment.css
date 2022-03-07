@@ -10,3 +10,8 @@
     border-radius: 25px;
     z-index: 3;
 }
+
+#paypal-button-container {
+    border: 1px black solid;
+    background-color: blue;
+}
