@@ -17,6 +17,10 @@ const tripSchema = new mongoose.Schema({
         type: String,
         required: true    
     },
+    arrivedate: {
+        type: String,
+        required: true
+    },
     bookingdate: {
         type: String,
         required: true
@@ -52,6 +56,10 @@ const tripSchema = new mongoose.Schema({
     arrivetime: {
         type: String,
         required: true 
+    },
+    airline: {
+        type: String,
+        required: true
     },
     flightnumber: {
         type: String,

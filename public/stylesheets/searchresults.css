@@ -1,13 +1,53 @@
+h1 {
+    justify-content: center;
+    text-align: center;
+    font-family: monospace;
+}
+
+.link {
+    text-decoration: none;
+}
 
 .infobox {
     position: relative;
     top: 100px;
-    width: 500px;
-    height: 500px;
+    width: 900px;
+    height: 350px;
     border: 1px cadetblue solid;   
     background-color: white; 
     margin: auto;
     box-shadow: 3px 5px #ced1d3e8;
     border-radius: 25px;
     z-index: 3;
+    
+}
+
+.options {
+    border: 1px rgb(168, 163, 163) solid;
+    border-radius: 10px;
+    height: 35px;
+    margin-left: 1em;
+    margin-right: 1em;
+    display: flex;
+    align-items: center;
+}
+
+.options:hover {
+    background-color: rgb(238, 231, 233);
+    border: rgb(238, 231, 233);
+}
+
+.flightdetails {
+    color: black;
+    font-size: 20px;
+    font-family: monospace;
+}
+
+.bold {
+    font-size: larger;
+    font-weight: 900;
+}
+
+.price {
+    color: green;
 }

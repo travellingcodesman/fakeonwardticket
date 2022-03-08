@@ -24,6 +24,7 @@ router.post('/', async (req, res) => {
             arrivalcity: req.body.arrivalcity,
             departtime: req.body.departtime,
             arrivetime: req.body.arrivetime,
+            airline: req.body.airline,
             flightnumber: req.body.flightnumber,
             price: req.body.price,
             bookingnumber: Math.floor(Math.random() * 100000000000),

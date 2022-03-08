@@ -13,3 +13,14 @@
     background-color:cadetblue;
 }
 
+.legal {
+    display: inline-block;
+    font-family: monospace;
+    font-size: 20px;
+    text-align: center;
+}
+
+.paypalsecure {
+    float: right;
+}
+
