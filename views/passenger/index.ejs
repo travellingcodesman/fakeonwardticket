@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="/stylesheets/passenger.css">
 
 <div class="infobox">
-    <h2>Passenger</h2>
+    <h1>Passenger</h1>
     <form action="/payment" method="POST">
         <div>
             <input type="text" name="firstname" placeholder="First name"  id="firstname" required>
@@ -16,37 +16,37 @@
         <div>
             <input type="email" name="email" placeholder="Email" id="email">
         </div> 
-        <div>
+        <div class="hidden">
             <input type="text" name="departurecode" value=<%= query.departurecode %>>
         </div>
-        <div>
+        <div class="hidden">
             <input type="text" name="departurecity" value=<%= query.departurecity %>>
         </div>
-        <div>
+        <div class="hidden">
             <input type="text" name="arrivalcode" value=<%= query.arrivalcode %>>
         </div>
-        <div>
+        <div class="hidden">
             <input type="text" name="arrivalcity" value=<%= query.arrivalcity %>>
         </div>
-        <div>
+        <div class="hidden">
             <input type="text" name="departdate" value=<%= query.departdate %>>
         </div>
-        <div>
+        <div class="hidden">
             <input type="text" name="arrivedate" value=<%= query.arrivedate %>>
         </div>
-        <div>
+        <div class="hidden">
             <input type="text" name="airline" value=<%= query.airline %>>
         </div>
-        <div>
+        <div class="hidden">
             <input type="text" name="flightnumber" value=<%= query.flightnumber %>>
         </div>
-        <div>
+        <div class="hidden">
             <input type="text" name="departtime" value=<%= query.departtime %>>
         </div>
-        <div>
+        <div class="hidden">
             <input type="text" name="arrivetime" value=<%= query.arrivetime %>>
         </div>
-        <div>
+        <div class="hidden">
             <input type="text" name="price" value=<%= query.price %>>
         </div>
         <button type="submit">Continue</button>

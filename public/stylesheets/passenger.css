@@ -1,12 +1,72 @@
+h1 {
+    justify-content: center;
+    text-align: center;
+    font-family: monospace;
+}
+
 .infobox {
     position: relative;
+    justify-content: center;
+    text-align: center;
     top: 100px;
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 350px;
     border: 1px cadetblue solid;   
     background-color: white; 
     margin: auto;
     box-shadow: 3px 5px #ced1d3e8;
     border-radius: 25px;
     z-index: 3;
+}
+
+#passengerinfo {
+    width: 250px;
+    height: 50px;
+    border-radius: 10px;
+    font-weight: 100;
+}
+
+input[type=text] {
+    width: 250px;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid grey;
+    font-weight: 100;
+    font-family: monospace;
+    font-size: 15px;
+}
+
+input[type=text]:focus {
+    border: 3px solid #555;
+}
+
+
+input[type=email] {
+    width: 250px;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid grey;
+    font-family: monospace;
+    font-size: 15px;
+}
+
+input[type=email]:focus {
+    border: 3px solid #555;
+}
+
+select {
+    width: 257px;
+    height: 53px;
+    border-radius: 10px;
+    border: 1px solid grey;
+    font-family: monospace;
+    font-size: 15px;
+}
+
+select:focus {
+    border: 3px solid #555;
+}
+
+.hidden {
+    display: none;
 }
