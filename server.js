@@ -11,11 +11,14 @@ const apiSearch = require('./public/javascript/middleware/apiSearch.js')
 
 
 const indexRouter = require('./routes/index')
+const legalRouter = require('./routes/legal')
+const privacyRouter = require('./routes/privacy')
 const searchRouter = require('./routes/searchresults')
 const passengerRouter = require('./routes/passenger')
 const paymentRouter = require('./routes/payment')
 const confirmationRouter = require('./routes/confirmation')
 const paypalRouter = require('./routes/paypalapi')
+
 
 
 app.set('view engine', 'ejs')
@@ -37,6 +40,8 @@ app.use(express.urlencoded({
 }))
 
 app.use('/', indexRouter)
+app.use('/legal', legalRouter)
+app.use('/privacy', privacyRouter)
 app.use('/searchresults', searchRouter)
 app.use('/passenger', passengerRouter)
 app.use('/payment', paymentRouter)

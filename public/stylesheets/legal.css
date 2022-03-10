@@ -1,0 +1,19 @@
+h1 {
+    justify-content: center;
+    text-align: center;
+    font-family: monospace;
+}
+
+.infobox {
+    position: relative;
+    top: 100px;
+    width: 900px;
+    height: 350px;
+    border: 1px cadetblue solid;   
+    background-color: white; 
+    margin: auto;
+    box-shadow: 3px 5px #ced1d3e8;
+    border-radius: 25px;
+    z-index: 3;
+    
+}

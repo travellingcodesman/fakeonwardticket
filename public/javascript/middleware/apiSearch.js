@@ -9,7 +9,7 @@ const apiSearch = async (req, res, next) => {
     try {
         const resp = await axios.get(`https://tequila-api.kiwi.com/v2/search?fly_from=${res.departurecode}&fly_to=${res.arrivalcode}&dateFrom=${dateformatted}&dateTo=${res.departdate}&max_stopovers=0&curr=USD&limit=5`, {
             headers: {
-                'apikey': 'VQESGEm6Hhu2El2yrk3vGLPM_hP_DwBM'
+                'apikey': process.env.API_KEY
             }
         })
         const apiResp = await resp.data
