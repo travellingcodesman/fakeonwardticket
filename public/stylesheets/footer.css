@@ -9,8 +9,10 @@
 }
 
 #bottomstuff {
+    position: relative;
     height: 140px;
     background-color:cadetblue;
+    text-align: center;
 }
 
 .legal {
@@ -21,6 +23,8 @@
 }
 
 .paypalsecure {
-    float: right;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 

@@ -4,7 +4,7 @@
 }
 
 #tripiata {
-    position: absolute;
+
     margin-top: 30px;
     display: inline;
 }
@@ -25,4 +25,18 @@
     position: absolute;
     right: 0;
     top: 50px
+}
+
+#detailbox {
+    border: 1px solid;
+}
+
+.firstrow {
+    background-color: rgb(209, 237, 241);
+    border: 1px solid;
+    margin-top: 0;
+}
+
+hr {
+    border-top: 1px solid grey
 }
