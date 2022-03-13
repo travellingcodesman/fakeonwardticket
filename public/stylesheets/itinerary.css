@@ -1,27 +1,29 @@
-#toprow {
-    display: flex;
-
+.toprow {
+    display: inline
 }
 
-#tripiata {
-
+.tripiata {
     margin-top: 30px;
-    display: inline;
+    border: 1px black solid;
 }
 
-#trip {
+.trip {
 
     font-size: 50px;
-    font-family: Arial black;;
-    color: rgb(71, 128, 252)
+    font-family: Arial black;
+    color: rgb(71, 128, 252);
+    border: 1px black solid;
+
 }
 
-#iata {
+.iata {
     height: 70px;
-    width: 100;
+    width: 100px;
+    margin-left: 0;
+    border: 1px black solid;
 }
 
-#bookingnumber {
+.bookingnumber {
     position: absolute;
     right: 0;
     top: 50px
