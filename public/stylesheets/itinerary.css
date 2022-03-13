@@ -1,8 +1,9 @@
-.toprow {
-    display: inline
+* {
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .tripiata {
+    display: flex;
     margin-top: 30px;
     border: 1px black solid;
 }
@@ -41,4 +42,8 @@
 
 hr {
     border-top: 1px solid grey
+}
+
+.greytext {
+    color: grey;
 }
