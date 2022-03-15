@@ -36,7 +36,7 @@ router.post('/', async (req, res) => {
             res.render('payment/index', { paypalClientId: process.env.PAYPAL_CLIENT_ID})
                 
         } catch {
-            res.render('index', {
+            res.render('payment/index', {
                     errorMessage: 'Unsuccessful'
                 })
             }

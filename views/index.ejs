@@ -3,34 +3,85 @@
 <div class="infobox">
     <h1>Flight Details</h1>
     <form action="/searchresults" method="Get">
-        <input autocomplete="off" list="" id="input" name="departure" placeholder="From?">
-            <datalist id="departure" required>
-                <option value="BKK">Bangkok(BKK)</option>
-                <option value="SFO">San Francisco(SFO)</option>
-                <option value="LAX">Los Angeles(LAX)</option>
-                <option value="SIN">Singapore(SIN)</option>
-                <option value="SGN">Ho Chi Minh City(SGN)</option>
-                <option value="KUL">Kuala Lumpur(KUL)</option>
-                <option value="JFK">New York City(JFK)</option>
-                <option value="LHR">London(LHR)</option>
-                <option value="CAN">Guangzhou(CAN)</option>                            
+        <input type="text" autocomplete="off" id="departure" name="departure" placeholder="From?">
 
-            </datalist>    
-        <input autocomplete="off" list="" id="input" name="arrival" placeholder="To where?">
-            <datalist id="arrival" required>
-                <option value="BKK">Bangkok(BKK)</option>
-                <option value="SFO">San Francisco(SFO)</option>
-                <option value="LAX">Los Angeles(LAX)</option>
-                <option value="SIN">Singapore(SIN)</option>
-                <option value="SGN">Ho Chi Minh City(SGN)</option>
-                <option value="KUL">Kuala Lumpur(KUL)</option>
-                <option value="JFK">New York City(JFK)</option>
-                <option value="LHR">London(LHR)</option>
-                <option value="CAN">Guangzhou(CAN)</option>                            
+            <ul>
+                <li class="departlist" >Bangkok(BKK)</li>
+                <li class="departlist" >San Francisco(SFO)</li>
+                <li class="departlist" >Los Angeles(LAX)</li>
+                <li class="departlist" >Singapore(SIN)</li>
+                <li class="departlist" >Ho Chi Minh City(SGN)</li>
+                <li class="departlist" >Kuala Lumpur(KUL)</li>
+                <li class="departlist" >New York City(JFK)</li>
+                <li class="departlist" >London(LHR)</li>
+                <li class="departlist" >Guangzhou(CAN)</li>                           
 
-            </datalist>
-            <input type="date" name="departdate" id="departdate" required>
+            </ul>     
+        <input type="text" autocomplete="off" id="arrival" name="arrival" placeholder="To?">
+            <ul>
+                <li class="arrivelist">Bangkok(BKK)</li>
+                <li class="arrivelist">San Francisco(SFO)</li>
+                <li class="arrivelist">Los Angeles(LAX)</li>
+                <li class="arrivelist">Singapore(SIN)</li>
+                <li class="arrivelist">Ho Chi Minh City(SGN)</li>
+                <li class="arrivelist">Kuala Lumpur(KUL)</li>
+                <li class="arrivelist">New York City(JFK)</li>
+                <li class="arrivelist">London(LHR)</li>
+                <li class="arrivelist">Guangzhou(CAN)</li>                           
+
+            </ul>
+
+        <input type="date" name="departdate" id="departdate" required>
         <button type="submit">Search</button>
     </form>  
-     
+    
 </div>
+<script>
+    let departure = document.getElementById('departure')
+    let arrival = document.getElementById('arrival')
+
+    document.querySelectorAll('.departlist').forEach(item => {
+        item.addEventListener('click', () => {
+            departure.value = item.innerHTML.slice(-4,-1)
+        })
+    })
+    document.querySelectorAll('.arrivelist').forEach(item => {
+        item.addEventListener('click', () => {
+            arrival.value = item.innerHTML.slice(-4,-1)
+        })
+    })
+
+
+
+    const filterdepart = () => {
+        let departuresearch = document.getElementById('departure').value.toUpperCase()
+        let departlist = document.querySelectorAll('.departlist')
+  
+        for (let i = 0; i < departlist.length; i++) {
+            console.log(departlist[i])
+            if (departlist[i].innerHTML.toUpperCase().indexOf(departuresearch) > -1) {
+                departlist[i].style.display = ''
+            } else {
+                departlist[i].style.display = 'none'
+            }
+
+        }
+    }
+    const filterarrive= () => {
+        let arrivalsearch = document.getElementById('arrival').value.toUpperCase()
+        let arrivelist = document.querySelectorAll('.arrivelist')
+  
+        for (let i = 0; i < arrivelist.length; i++) {
+            console.log(arrivelist[i])
+            if (arrivelist[i].innerHTML.toUpperCase().indexOf(arrivalsearch) > -1) {
+                arrivelist[i].style.display = ''
+            } else {
+                arrivelist[i].style.display = 'none'
+            }
+
+        }
+    }
+    departure.addEventListener('keyup', filterdepart)
+    arrival.addEventListener('keyup', filterarrive)
+
+</script>

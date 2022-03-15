@@ -9,11 +9,23 @@ h1 {
     position: relative;
     top: 100px;
     width: 600px;
-    height: 300px;
+    height: 700px;
     border: 1px cadetblue solid;   
     background-color: white; 
     margin: auto;
     box-shadow: 3px 5px #ced1d3e8;
     border-radius: 25px;
     z-index: 3;
+}
+
+.departradio {
+    display: inline
+}
+
+li {
+    border: 1px black solid;
+}
+
+li:hover {
+    background-color: yellow;
 }
