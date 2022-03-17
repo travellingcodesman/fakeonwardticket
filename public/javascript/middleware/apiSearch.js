@@ -1,8 +1,8 @@
 const axios = require('axios').default
 
 const apiSearch = async (req, res, next) => {
-    res.departurecode = req.query.departure.toUpperCase()
-    res.arrivalcode = req.query.arrival.toUpperCase()
+    res.departurecode = req.query.departure.slice(-4,-1)
+    res.arrivalcode = req.query.arrival.slice(-4,-1)
     res.departdate = req.query.departdate
     const datearray = res.departdate.split('-')
     dateformatted = `${datearray[2]}/${datearray[1]}/${datearray[0]}`
@@ -44,3 +44,4 @@ const apiSearch = async (req, res, next) => {
 }
 
 module.exports = apiSearch
+

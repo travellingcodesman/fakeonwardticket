@@ -1,15 +1,28 @@
 <link rel="stylesheet" href="/stylesheets/searchresults.css">
 <div class="infobox">
 <h1>Best Flights</h1>
-<% for( let i = 0; i < resultsLength; i++ ) { %>
-<a class="link" href="/passenger?departurecode=<%= departurecode %>&departurecity=<%= departurecity[i] %>&arrivalcode=<%= arrivalcode %>&arrivalcity=<%= arrivalcity[i] %>&departdate=<%= departdate %>&arrivedate=<%= arrivedate[i] %>&airline=<%= airline[i] %>&flightnumber=<%= flightnumber[i] %>&departtime=<%= departtime[i] %>&arrivetime=<%= arrivetime[i] %>&price=<%= price[i] %>" >
-    <div class='options' >
-        <span class="flightdetails">Nonstop <span class="bold"><%= departtime[i] %>-<%= arrivetime[i] %></span> <%= departurecity[i] %>(<%= departurecode %>)-<%= arrivalcity[i] %>(<%= arrivalcode %>) <%= airline[i] %><%= flightnumber[i] %> <span class="bold price">$<%= price[i] %></span></span>
+<% if (resultsLength > 0) { %>
+<%   for (let i = 0; i < resultsLength; i++ ) { %>
+        <a class="link" href="/passenger?departurecode=<%= departurecode %>&departurecity=<%= departurecity[i] %>&arrivalcode=<%= arrivalcode %>&arrivalcity=<%= arrivalcity[i] %>&departdate=<%= departdate %>&arrivedate=<%= arrivedate[i] %>&airline=<%= airline[i] %>&flightnumber=<%= flightnumber[i] %>&departtime=<%= departtime[i] %>&arrivetime=<%= arrivetime[i] %>&price=<%= price[i] %>" >
+            <div class='options'>
+                <span class="flightdetails">Nonstop <span class="bold"><%= departtime[i] %>-<%= arrivetime[i] %></span> <%= departurecity[i] %>(<%= departurecode %>)-<%= arrivalcity[i] %>(<%= arrivalcode %>) <%= airline[i] %><%= flightnumber[i] %> <span class="bold price">$<%= price[i] %></span></span>
+    
+            </div>
+        </a>
+        <br>
+<%      }     %>
+<%  } else { %>
+        <div class="noresult">
+            <p>There are currently no one way flights available on <%= departdate %>. Please revise either the departing and/or arriving airport or select another date.</p>
+            <br>
+            <br>
+            <br>
+            <form action="/">
+                <input type="submit" value="Back" />
+            </form>
 
-    </div>
-</a>
-<br>
-<%    } %>
+        </div>
+<%  } %>
 </div>
 
 

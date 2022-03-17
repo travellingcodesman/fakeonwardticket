@@ -36,6 +36,10 @@ input[type=text] {
     font-size: 15px;
 }
 
+input[type=text]:hover {
+    border: 2px solid grey;
+}
+
 input[type=text]:focus {
     border: 3px solid #555;
 }
@@ -48,6 +52,10 @@ input[type=email] {
     border: 1px solid grey;
     font-family: monospace;
     font-size: 15px;
+}
+
+input[type=text]:hover {
+    border: 2px solid grey;
 }
 
 input[type=email]:focus {
@@ -69,4 +77,26 @@ select:focus {
 
 .hidden {
     display: none;
+}
+
+button {
+    width: 150px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid grey;
+    font-family: monospace;
+    box-shadow: 1px 3px #ced1d3e8;
+    
+}
+
+button:hover {
+    background-color: rgb(238, 231, 233);
+    border: rgb(238, 231, 233);
+    box-shadow: 1px 3px #ced1d3e8;
+}
+
+button:active {
+    width: 144px;
+    height: 28px;
+    border-radius: 8px;
 }

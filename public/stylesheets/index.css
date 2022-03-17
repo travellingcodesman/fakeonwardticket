@@ -3,29 +3,126 @@ h1 {
     text-align: center;
     font-family: monospace;
 }
+h3 {
+    font-family: monospace;
+    text-align: left;
+    margin-left: 20px
+}
+
+.oneway {
+    border: 1px black solid;
+    border-radius: 5px;
+    padding: 3px;
+    margin-right: 15px;
+    color:rgb(95, 94, 94)
+}
 
 
 .infobox {
     position: relative;
     top: 100px;
-    width: 600px;
-    height: 700px;
+    width: 900px;
+    height: 350px;
     border: 1px cadetblue solid;   
     background-color: white; 
     margin: auto;
     box-shadow: 3px 5px #ced1d3e8;
     border-radius: 25px;
     z-index: 3;
+    text-align: center;
 }
 
-.departradio {
-    display: inline
+.searchcontainer {
+    display: flex;
+    justify-content:space-around;
+    height: 200px;
+}
+
+.departonleft {
+    text-align: center;
+}
+
+.arriveonright {
+    text-align: center;
+}
+
+input[type=text] {
+    width: 270px;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid grey;
+    font-weight: 100;
+    font-family: monospace;
+    font-size: 15px;
+}
+
+input[type=text]:hover {
+    border: 2px solid grey;
+}
+
+input[type=text]:focus {
+    border: 3px solid #555;
+}
+
+ul {
+    list-style: none;
+    max-height: 100px;
+    overflow: auto;
+    padding: 0;
+    text-indent: 10px;
+    text-align: center;
+    width: 270px;
+ 
 }
 
 li {
     border: 1px black solid;
+    width: 250px;
+    height: 30px;
+    font-family: monospace;
+    font-size: 15px;
+
 }
 
 li:hover {
-    background-color: yellow;
+    background-color: rgb(238, 231, 233);
+    border: rgb(238, 231, 233);
+}
+
+input[type=date] {
+    width: 250px;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid grey;
+    font-weight: 100;
+    font-family: monospace;
+    font-size: 15px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+input[type=date]:hover {
+    border: 2px solid grey;
+}
+
+button {
+    width: 150px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid grey;
+    font-family: monospace;
+    box-shadow: 1px 3px #ced1d3e8;
+    
+}
+
+button:hover {
+    background-color: rgb(238, 231, 233);
+    border: rgb(238, 231, 233);
+    box-shadow: 1px 3px #ced1d3e8;
+}
+
+button:active {
+    width: 144px;
+    height: 28px;
+    border-radius: 8px;
 }

@@ -2,36 +2,90 @@
 
 <div class="infobox">
     <h1>Flight Details</h1>
+    <h3><span class="oneway">One way Nonstop</span><span class="oneway">1 Adult</span><span class="oneway">Economy</span></h3>
     <form action="/searchresults" method="Get">
-        <input type="text" autocomplete="off" id="departure" name="departure" placeholder="From?">
-
-            <ul>
-                <li class="departlist" >Bangkok(BKK)</li>
-                <li class="departlist" >San Francisco(SFO)</li>
-                <li class="departlist" >Los Angeles(LAX)</li>
-                <li class="departlist" >Singapore(SIN)</li>
-                <li class="departlist" >Ho Chi Minh City(SGN)</li>
-                <li class="departlist" >Kuala Lumpur(KUL)</li>
-                <li class="departlist" >New York City(JFK)</li>
-                <li class="departlist" >London(LHR)</li>
-                <li class="departlist" >Guangzhou(CAN)</li>                           
-
-            </ul>     
-        <input type="text" autocomplete="off" id="arrival" name="arrival" placeholder="To?">
-            <ul>
-                <li class="arrivelist">Bangkok(BKK)</li>
-                <li class="arrivelist">San Francisco(SFO)</li>
-                <li class="arrivelist">Los Angeles(LAX)</li>
-                <li class="arrivelist">Singapore(SIN)</li>
-                <li class="arrivelist">Ho Chi Minh City(SGN)</li>
-                <li class="arrivelist">Kuala Lumpur(KUL)</li>
-                <li class="arrivelist">New York City(JFK)</li>
-                <li class="arrivelist">London(LHR)</li>
-                <li class="arrivelist">Guangzhou(CAN)</li>                           
-
-            </ul>
-
-        <input type="date" name="departdate" id="departdate" required>
+        <div class="searchcontainer">
+            <div class="departonleft">
+                <input type="text" autocomplete="off" id="departure" name="departure" placeholder="From?">
+        
+                    <ul id="departul">
+                        <li class="departlist" >Bangkok(BKK)</li>
+                        <li class="departlist" >San Francisco(SFO)</li>
+                        <li class="departlist" >Los Angeles(LAX)</li>
+                        <li class="departlist" >Singapore(SIN)</li>
+                        <li class="departlist" >Ho Chi Minh City(SGN)</li>
+                        <li class="departlist" >Kuala Lumpur(KUL)</li>
+                        <li class="departlist" >New York City(JFK)</li>
+                        <li class="departlist" >London(LHR)</li>
+                        <li class="departlist" >Guangzhou(CAN)</li>                           
+                        <li class="departlist" >Atlanta(ATL)</li>
+                        <li class="departlist" >Beijing(PEK)</li>   
+                        <li class="departlist" >Dubai(DXB)</li>   
+                        <li class="departlist" >Chicago(ORD)</li>   
+                        <li class="departlist" >Tokyo(HND)</li>   
+                        <li class="departlist" >Hong Kong(HKG)</li>   
+                        <li class="departlist" >Shanghai(PVG)</li>
+                        <li class="departlist" >Paris(CDG)</li>   
+                        <li class="departlist" >Amsterdam(AMS)</li>   
+                        <li class="departlist" >Dallas(DFW)</li>   
+                        <li class="departlist" >Frankfurt(FRA)</li>   
+                        <li class="departlist" >Istanbul(IST)</li>
+                        <li class="departlist" >Delhi(DEL)</li>   
+                        <li class="departlist" >Jakarta(CGK)</li>   
+                        <li class="departlist" >Seoul(ICN)</li>   
+                        <li class="departlist" >Denver(DEN)</li>   
+                        <li class="departlist" >Madrid(MAD)</li>
+                        <li class="departlist" >Chengdu(CTU)</li>   
+                        <li class="departlist" >Las Vegas(LAS)</li>   
+                        <li class="departlist" >Barcelona(BCN)</li>   
+                        <li class="departlist" >Mumbai(BOM)</li>   
+                        <li class="departlist" >Toronto(YYZ)</li> 
+                        <li class="departlist" >New York City(LGA)</li>
+                        <li class="departlist" >New York City(EWR)</li>                
+                    </ul>     
+        
+            </div>
+            <div class="arriveonright">
+                <input type="text" autocomplete="off" id="arrival" name="arrival" placeholder="To?">
+                <ul id="arriveul">
+                    <li class="arrivelist" >Bangkok(BKK)</li>
+                    <li class="arrivelist" >San Francisco(SFO)</li>
+                    <li class="arrivelist" >Los Angeles(LAX)</li>
+                    <li class="arrivelist" >Singapore(SIN)</li>
+                    <li class="arrivelist" >Ho Chi Minh City(SGN)</li>
+                    <li class="arrivelist" >Kuala Lumpur(KUL)</li>
+                    <li class="arrivelist" >New York City(JFK)</li>
+                    <li class="arrivelist" >London(LHR)</li>
+                    <li class="arrivelist" >Guangzhou(CAN)</li>                           
+                    <li class="arrivelist" >Atlanta(ATL)</li>
+                    <li class="arrivelist" >Beijing(PEK)</li>   
+                    <li class="arrivelist" >Dubai(DXB)</li>   
+                    <li class="arrivelist" >Chicago(ORD)</li>   
+                    <li class="arrivelist" >Tokyo(HND)</li>   
+                    <li class="arrivelist" >Hong Kong(HKG)</li>   
+                    <li class="arrivelist" >Shanghai(PVG)</li>
+                    <li class="arrivelist" >Paris(CDG)</li>   
+                    <li class="arrivelist" >Amsterdam(AMS)</li>   
+                    <li class="arrivelist" >Dallas(DFW)</li>   
+                    <li class="arrivelist" >Frankfurt(FRA)</li>   
+                    <li class="arrivelist" >Istanbul(IST)</li>
+                    <li class="arrivelist" >Delhi(DEL)</li>   
+                    <li class="arrivelist" >Jakarta(CGK)</li>   
+                    <li class="arrivelist" >Seoul(ICN)</li>   
+                    <li class="arrivelist" >Denver(DEN)</li>   
+                    <li class="arrivelist" >Madrid(MAD)</li>
+                    <li class="arrivelist" >Chengdu(CTU)</li>   
+                    <li class="arrivelist" >Las Vegas(LAS)</li>   
+                    <li class="arrivelist" >Barcelona(BCN)</li>   
+                    <li class="arrivelist" >Mumbai(BOM)</li>   
+                    <li class="arrivelist" >Toronto(YYZ)</li> 
+                    <li class="arrivelist" >New York City(LGA)</li>
+                    <li class="arrivelist" >New York City(EWR)</li>                           
+        
+                </ul>      
+            </div>
+            <input type="date" name="departdate" id="departdate" required>
+        </div>
         <button type="submit">Search</button>
     </form>  
     
@@ -39,15 +93,29 @@
 <script>
     let departure = document.getElementById('departure')
     let arrival = document.getElementById('arrival')
+    let departul = document.getElementById('departul')
+    let arriveul = document.getElementById('arriveul')
+    departul.style.display = 'none'
+    arriveul.style.display = 'none'
+
+    departure.addEventListener('click', () => {
+        departul.style.display = ''
+    })
+
+    arrival.addEventListener('click', () => {
+        arriveul.style.display = ''
+    })
 
     document.querySelectorAll('.departlist').forEach(item => {
         item.addEventListener('click', () => {
-            departure.value = item.innerHTML.slice(-4,-1)
+            departure.value = item.innerHTML
+            departul.style.display = 'none'
         })
     })
     document.querySelectorAll('.arrivelist').forEach(item => {
         item.addEventListener('click', () => {
-            arrival.value = item.innerHTML.slice(-4,-1)
+            arrival.value = item.innerHTML
+            arriveul.style.display = 'none'
         })
     })
 
