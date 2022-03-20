@@ -11,7 +11,7 @@ const apiSearch = require('./public/javascript/middleware/apiSearch.js')
 
 
 const indexRouter = require('./routes/index')
-const legalRouter = require('./routes/legal')
+const termsRouter = require('./routes/terms')
 const privacyRouter = require('./routes/privacy')
 const searchRouter = require('./routes/searchresults')
 const passengerRouter = require('./routes/passenger')
@@ -40,7 +40,7 @@ app.use(express.urlencoded({
 }))
 
 app.use('/', indexRouter)
-app.use('/legal', legalRouter)
+app.use('/terms', termsRouter)
 app.use('/privacy', privacyRouter)
 app.use('/searchresults', searchRouter)
 app.use('/passenger', passengerRouter)
