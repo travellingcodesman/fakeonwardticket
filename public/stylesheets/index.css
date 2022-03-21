@@ -34,7 +34,7 @@ h3 {
 
 .searchcontainer {
     display: flex;
-    justify-content:space-around;
+    justify-content: space-around;
     height: 200px;
 }
 
@@ -73,6 +73,20 @@ ul {
     text-align: center;
     width: 270px;
  
+}
+
+*::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+*::-webkit-scrollbar-track {
+    background: cadetblue;
+}
+  
+*::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 20px;
+    border: 3px solid blue;
 }
 
 li {
