@@ -1,29 +1,31 @@
 <link rel="stylesheet" href="/stylesheets/confirmation.css">
 
 <div class="infobox">
-    <%= trips[0] %> 
+    <% trips = trips[0] %> 
+    <%= trips %> 
 </div>
+
 
 <div class="toprow">
     <div class="tripiata">
         <span class="trip">Trip</span>
         <img class="iata" src="../images/iata.png">
         <div class="bookingnumber">
-            <span class="greytext">Booking No.</span> 
+            <span class="greytext">Booking No. <%= trips.bookingnumber %> </span> 
             <br> 
-            <span class="greytext">Booked on:</span> 
+            <span class="greytext">Booked on: <%= trips.bookingdate.slice(0,21) %></span> 
         </div>
     </div>
 </div>
 <h2>Itinerary</h2>
-<h3>(Airline Booking Reference: )</h3>
+<h3>(Airline Booking Reference: <%= trips.airlinereference %>  )</h3>
 <br>
 <p>We advise you print out your itinerary and take it with you to ensure your trip goes as smoothly as possible.</p>
 <hr>
 <h3>Passengers</h3>
 <span class="greytext">Name</span><span class="greytext">Ticket Number</span>
 <br>
-<span>Last/First</span><span></span>
+<span> <%= trips.lastname %>/<%= trips.firstname %>  </span><span></span>
 <hr>
 <h3>Flight Details</h3>
 <div id="detailbox">
@@ -34,13 +36,13 @@
         <span>Class</span>
     </p>
     <p>
-        <span>Departtime, Departdate</span>
-        <span>Departairport</span>
-        <span>Flightnumber</span>
+        <span><%= trips.departtime %> , <%= trips.departdate %> </span>
+        <span><%= trips.departurecity%> (<%= trips.departurecode %>) </span>
+        <span> <%= trips.flightnumber %> </span>
         <span>Economy</span>
         <br>
-        <span>Arrivetime, Arrivedate</span>
-        <span>Arrivalairport</span>
+        <span> <%= trips.arrivetime %> , <%= trips.arrivedate %></span>
+        <span> <%= trips.arrivalcity %> (<%= trips.arrivalcode %>)   </span>
         <br>
         <br>
         <span>Baggage Allowance</span>

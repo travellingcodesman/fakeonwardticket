@@ -20,7 +20,7 @@ h3 {
 
 .infobox {
     position: relative;
-    top: 100px;
+    top: 50px;
     width: 900px;
     height: 350px;
     border: 1px cadetblue solid;   
@@ -119,6 +119,7 @@ input[type=date] {
 input[type=date]:hover {
     border: 2px solid grey;
 }
+
 
 button {
     width: 150px;

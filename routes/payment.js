@@ -16,7 +16,7 @@ router.post('/', async (req, res) => {
             lastname: req.body.lastname,
             gender: req.body.gender,
             departdate: req.body.departdate,
-            bookingdate: new Date(),
+            bookingdate: new Date().slice(0,21),
             email: req.body.email,
             departurecode: req.body.departurecode,
             arrivalcode: req.body.arrivalcode,
