@@ -32,7 +32,7 @@ router.post('/', async (req, res) => {
         })
 
         try {
-            const newTrip = await trip.save()
+            const newtrip = await trip.save()
             res.render('payment/index', { paypalClientId: process.env.PAYPAL_CLIENT_ID})
                 
         } catch {

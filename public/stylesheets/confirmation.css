@@ -2,11 +2,61 @@
     position: relative;
     top: 100px;
     width: 500px;
-    height: 500px;
+    height: 1400px;
     border: 1px cadetblue solid;   
     background-color: white; 
     margin: auto;
     box-shadow: 3px 5px #ced1d3e8;
     border-radius: 25px;
     z-index: 3;
+    opacity: .9;
+}
+
+* {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.tripiata {
+    display: flex;
+    margin-top: 30px;
+    border: 1px black solid;
+}
+
+.trip {
+
+    font-size: 50px;
+    font-family: Arial black;
+    color: rgb(71, 128, 252);
+    border: 1px black solid;
+
+}
+
+.iata {
+    height: 70px;
+    width: 100px;
+    margin-left: 0;
+    border: 1px black solid;
+}
+
+.bookingnumber {
+    padding-left : 1000px;
+    top: 50px
+}
+
+#detailbox {
+    border: 1px solid;
+}
+
+.firstrow {
+    background-color: rgb(209, 237, 241);
+    border: 1px solid;
+    margin-top: 0;
+}
+
+hr {
+    border-top: 1px solid grey
+}
+
+.greytext {
+    color: grey;
 }

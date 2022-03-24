@@ -17,6 +17,7 @@ h1 {
     box-shadow: 3px 5px #ced1d3e8;
     border-radius: 25px;
     z-index: 3;
+    opacity: .9;
 }
 
 #passengerinfo {
