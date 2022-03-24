@@ -4,13 +4,14 @@ const router = express.Router()
 const mongoose = require('mongoose')
 
 //Confirmation page
-router.get('/', (req, res) => {
-    Trip.find( {} , (trip) => {
-        console.log(trip)
-        res.render('confirmation/index', {
-            newtrip: trip
-        })
-    })
+router.get('/', async (req, res) => {
+    try {
+        const trips = await Trip.find({})
+        res.render('confirmation/index', { trips: trips})
+    } catch {
+        res.redirect('/')
+    }
+
 })
 
 module.exports = router
