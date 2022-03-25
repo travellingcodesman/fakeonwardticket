@@ -31,18 +31,18 @@ input[type=text] {
     width: 250px;
     height: 50px;
     border-radius: 10px;
-    border: 1px solid grey;
+    border: 2px solid cadetblue;
     font-weight: 100;
     font-family: monospace;
     font-size: 15px;
 }
 
 input[type=text]:hover {
-    border: 2px solid grey;
+    border: 3px solid cadetblue;
 }
 
 input[type=text]:focus {
-    border: 3px solid #555;
+    outline: none;
 }
 
 
@@ -50,30 +50,34 @@ input[type=email] {
     width: 250px;
     height: 50px;
     border-radius: 10px;
-    border: 1px solid grey;
+    border: 2px solid cadetblue;
     font-family: monospace;
     font-size: 15px;
 }
 
-input[type=text]:hover {
-    border: 2px solid grey;
+input[type=email]:hover {
+    border: 3px solid cadetblue;
 }
 
 input[type=email]:focus {
-    border: 3px solid #555;
+    outline:none;
 }
 
 select {
     width: 257px;
     height: 53px;
     border-radius: 10px;
-    border: 1px solid grey;
+    border: 2px solid cadetblue;
     font-family: monospace;
     font-size: 15px;
 }
 
+select:hover {
+    border: 3px solid cadetblue;
+}
+
 select:focus {
-    border: 3px solid #555;
+    outline: none;
 }
 
 .hidden {

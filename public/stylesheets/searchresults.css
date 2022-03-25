@@ -23,7 +23,7 @@ h1 {
 }
 
 .options {
-    border: 1px rgb(168, 163, 163) solid;
+    border: 1px cadetblue solid;
     border-radius: 10px;
     height: 35px;
     margin-left: 1em;
@@ -49,7 +49,7 @@ h1 {
 }
 
 .price {
-    color: green;
+    color: cadetblue;
 }
 
 .noresult {

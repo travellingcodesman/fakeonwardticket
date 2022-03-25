@@ -10,13 +10,13 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', async (req, res) => {
-    randombooking = randbookrefer()
     const trip = new Trip({
             firstname: req.body.firstname,
             lastname: req.body.lastname,
             gender: req.body.gender,
             departdate: req.body.departdate,
-            bookingdate: new Date().slice(0,21),
+            arrivedate: req.body.arrivedate,
+            bookingdate: new Date().toString().slice(0,21),
             email: req.body.email,
             departurecode: req.body.departurecode,
             arrivalcode: req.body.arrivalcode,
@@ -28,7 +28,7 @@ router.post('/', async (req, res) => {
             flightnumber: req.body.flightnumber,
             price: req.body.price,
             bookingnumber: Math.floor(Math.random() * 100000000000),
-            airlinereference: randombooking
+            airlinereference: randbookrefer()
         })
 
         try {
@@ -36,7 +36,7 @@ router.post('/', async (req, res) => {
             res.render('payment/index', { paypalClientId: process.env.PAYPAL_CLIENT_ID})
                 
         } catch {
-            res.render('payment/index', {
+            res.render('/index', {
                     errorMessage: 'Unsuccessful'
                 })
             }

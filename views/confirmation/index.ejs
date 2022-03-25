@@ -1,8 +1,8 @@
 <link rel="stylesheet" href="/stylesheets/confirmation.css">
 
 <div class="infobox">
+    <%= trips[0] %> 
     <% trips = trips[0] %> 
-    <%= trips %> 
 </div>
 
 
@@ -13,7 +13,7 @@
         <div class="bookingnumber">
             <span class="greytext">Booking No. <%= trips.bookingnumber %> </span> 
             <br> 
-            <span class="greytext">Booked on: <%= trips.bookingdate.slice(0,21) %></span> 
+            <span class="greytext">Booked on: <%= trips.bookingdate %></span> 
         </div>
     </div>
 </div>
@@ -38,7 +38,7 @@
     <p>
         <span><%= trips.departtime %> , <%= trips.departdate %> </span>
         <span><%= trips.departurecity%> (<%= trips.departurecode %>) </span>
-        <span> <%= trips.flightnumber %> </span>
+        <span><%= trips.airline %>  <%= trips.flightnumber %> </span>
         <span>Economy</span>
         <br>
         <span> <%= trips.arrivetime %> , <%= trips.arrivedate %></span>
@@ -64,5 +64,142 @@
         2. Please note that tickets must be used in the sequence set out in the itinerary, otherwise airlines reserve the right to refuse carriage. Trip bears no responsibility if passengers are unable to board a plane due to non complying with airline policies and regulations.
     </li>
 </ul>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="toprow">
+    <div class="tripiata">
+        <span class="trip">Trip</span>
+        <img class="iata" src="../images/iata.png">
+    </div>
+    <div class="bookingnumber">
+        <span class="greytext">Booking No.</span>
+        <br> 
+        <span class="greytext">Booked on:</span>
+    </div>
+</div>
+<h2>E-Receipt</h2>
+<h3>(Airline Booking Reference: )</h3>
+<div class="sealportion">
+    <div class="leftofseal">
+        <div class="inlinetop">
+            <div class="topleftofseal">
+                Total amount
+                <br>
+                <br>
+                For payment of
+                <br>
+                <br>
+                Payment method
+            </div>
+            <div class="toprightofseal">
+                Total <span class="greytext">(taxes and fees included)</span>
+                <br>
+                <br>
+                Flights
+                <br>
+                <br>
+                Visa credit card
+            </div>
+        </div>
+        <p>
+            <span class="greytext">Payment Received: </span>
+            <br>
+            <br>
+            <span class="greytext">E-Receipt Issued:</span>
+        </p>
+    </div>
+    <img class="seal" src="../images/seal.jpg">
+</div>
+<hr>
+<h3>Passenger</h3>
+<div class="passenger">
+    <div class="passengerleft">
+        <span class="greytext">Name</span>
+        <br>
+        <br>
+        Last/First
+    </div>
+    <div class="passengerright">
+        <span class="greytext">Ticket Number</span>
+        <br>
+        <br>
 
+    </div>
+</div>
+<hr>
+<h3>Flights</h3>
+<div class="flights">
+    <div class="flightsleft">
+        <span class="greytext">Date</span>
+        <br>
+        <br>
+
+    </div>
+    <div class="flightscenter">
+        <span class="greytext">Route</span>
+        <br>
+        <br>
+
+    </div>
+    <div class="flightsright">
+        <span class="greytext">Class</span>
+        <br>
+        <br>
+        Economy class
+    </div>
+</div>
+<hr>
+<h3>Payment Summary</h3>
+<div class="summary">
+    <div class="summaryleft">
+        <span class="greytext">Item</span>
+        <br>
+        <br>
+        Fare
+        <br>
+        <br>
+        Taxes & fees
+        <br>
+        <br>
+        Total
+    </div>
+    <div class="summaryright">
+        <span class="greytext">Amount</span>
+        <br>
+        <br>
+
+    </div>
+</div>
+<p class="greytext">
+    There may be a slight discrepancy between the sum of the indiviual items and the total amount due to conversions at the exchange rate. The total amount will always prevail.
+</p>
 

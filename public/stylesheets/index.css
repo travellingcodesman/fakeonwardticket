@@ -10,7 +10,7 @@ h3 {
 }
 
 .oneway {
-    border: 1px black solid;
+    border: 2px cadetblue solid;
     border-radius: 5px;
     padding: 3px;
     margin-right: 15px;
@@ -51,18 +51,19 @@ input[type=text] {
     width: 270px;
     height: 50px;
     border-radius: 10px;
-    border: 1px solid grey;
+    border: 2px solid cadetblue;
     font-weight: 100;
     font-family: monospace;
     font-size: 15px;
 }
 
 input[type=text]:hover {
-    border: 2px solid grey;
+    border: 3px solid cadetblue;
+
 }
 
 input[type=text]:focus {
-    border: 3px solid #555;
+    outline: none;
 }
 
 ul {
@@ -91,7 +92,7 @@ ul::-webkit-scrollbar-thumb {
 }
 
 li {
-    border: 1px black solid;
+    border: 1px cadetblue solid;
     width: 250px;
     height: 30px;
     font-family: monospace;
@@ -108,7 +109,7 @@ input[type=date] {
     width: 250px;
     height: 50px;
     border-radius: 10px;
-    border: 1px solid grey;
+    border: 2px solid cadetblue;
     font-weight: 100;
     font-family: monospace;
     font-size: 15px;
@@ -117,9 +118,12 @@ input[type=date] {
 }
 
 input[type=date]:hover {
-    border: 2px solid grey;
+    border: 3px solid cadetblue;
 }
 
+input[type=date]:focus {
+    outline: none;
+}
 
 button {
     width: 150px;
