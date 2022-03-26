@@ -18,39 +18,62 @@
     </div>
 </div>
 <h2>Itinerary</h2>
-<h3>(Airline Booking Reference: <%= trips.airlinereference %>  )</h3>
+<h3>(Airline Booking Reference: <%= trips.airlinereference %>)</h3>
 <br>
 <p>We advise you print out your itinerary and take it with you to ensure your trip goes as smoothly as possible.</p>
 <hr>
-<h3>Passengers</h3>
-<span class="greytext">Name</span><span class="greytext">Ticket Number</span>
+<div class="ipassenger">
+    <div class="ipassengerleft">
+        <h3>Passengers</h3>
+        <span class="greytext">Name</span>
+        <br>
+        <span> <%= trips.lastname %>/<%= trips.firstname %>  </span>        
+    </div>
+    <div class="ipassengerright">
+        <br>
+        <br>
+        <br>
+        <span class="greytext">Ticket Number</span>
+        <br>
+        <%= trips.airlinereference %>
+    </div>
+</div>
 <br>
-<span> <%= trips.lastname %>/<%= trips.firstname %>  </span><span></span>
 <hr>
 <h3>Flight Details</h3>
-<div id="detailbox">
+<div class="detailbox">
     <p class="firstrow">
-        <span>Depart/Arrive Time</span>
-        <span>Departure/Arrival Airport</span>
-        <span>Flight No.</span>
-        <span>Class</span>
+        <span class="firstrowa">Depart/Arrive Time</span>
+        <span class="firstrowb">Departure/Arrival Airport</span>
+        <span class="firstrowc">Flight No.</span>
+        <span class="firstrowd">Class</span>
     </p>
-    <p>
-        <span><%= trips.departtime %> , <%= trips.departdate %> </span>
-        <span><%= trips.departurecity%> (<%= trips.departurecode %>) </span>
-        <span><%= trips.airline %>  <%= trips.flightnumber %> </span>
-        <span>Economy</span>
-        <br>
-        <span> <%= trips.arrivetime %> , <%= trips.arrivedate %></span>
-        <span> <%= trips.arrivalcity %> (<%= trips.arrivalcode %>)   </span>
-        <br>
-        <br>
-        <span>Baggage Allowance</span>
-        <br>
-        <span class="greytext">[Checked Baggage]</span> No free baggage allowance.Please contact the airline for detailed baggage regulations.
-        <br>
-        <span class="greytext">[Carry-on Baggage]</span> 1 piece(s) per person. 7kg each piece. Each piece cannot exceed 56*36*23CM in size.
-    </p>
+    <div class="secondsection">
+        <div class="departarrivetime">
+            <span><%= trips.departtime %> , <%= trips.departdate %> </span>
+            <br>
+            <span> <%= trips.arrivetime %> , <%= trips.arrivedate %></span>
+        </div>
+        <div class="departarriveairport">
+            <span><%= trips.departurecity %> (<%= trips.departurecode %>) </span>
+            <br>
+            <span><%= trips.airline %>  <%= trips.flightnumber %> </span>
+        </div>
+        <div class="flightnum">
+            <span> <%= trips.arrivalcity %> (<%= trips.arrivalcode %>)   </span>            
+        </div>
+        <div class="class">
+            <span>Economy</span>
+        </div>
+    
+    </div>
+    <br>
+    <span>Baggage Allowance</span>
+    <br>
+    <br>
+    <span class="greytext">[Checked Baggage]</span> No free baggage allowance.Please contact the airline for detailed baggage regulations.
+    <br>
+    <span class="greytext">[Carry-on Baggage]</span> 1 piece(s) per person. 7kg each piece. Each piece cannot exceed 56*36*23CM in size.
 </div>
 <br>
 <hr>
@@ -64,28 +87,7 @@
         2. Please note that tickets must be used in the sequence set out in the itinerary, otherwise airlines reserve the right to refuse carriage. Trip bears no responsibility if passengers are unable to board a plane due to non complying with airline policies and regulations.
     </li>
 </ul>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
 <br>
 <br>
 <br>
@@ -99,15 +101,15 @@
     <div class="tripiata">
         <span class="trip">Trip</span>
         <img class="iata" src="../images/iata.png">
-    </div>
-    <div class="bookingnumber">
-        <span class="greytext">Booking No.</span>
-        <br> 
-        <span class="greytext">Booked on:</span>
+        <div class="bookingnumber">
+            <span class="greytext">Booking No. <%= trips.bookingnumber %></span>
+            <br> 
+            <span class="greytext">Booked on: <%= trips.bookingdate %></span>
+        </div>
     </div>
 </div>
 <h2>E-Receipt</h2>
-<h3>(Airline Booking Reference: )</h3>
+<h3>(Airline Booking Reference: <%= trips.airlinereference %>)</h3>
 <div class="sealportion">
     <div class="leftofseal">
         <div class="inlinetop">
@@ -121,7 +123,7 @@
                 Payment method
             </div>
             <div class="toprightofseal">
-                Total <span class="greytext">(taxes and fees included)</span>
+                Total <span class="totalprice">$<%= trips.price*1.08 %><span class="greytext"> (taxes and fees included)</span></span>
                 <br>
                 <br>
                 Flights
@@ -131,30 +133,31 @@
             </div>
         </div>
         <p>
-            <span class="greytext">Payment Received: </span>
+            <span class="greytext">Payment Received: <%= trips.bookingdate %></span>
             <br>
             <br>
-            <span class="greytext">E-Receipt Issued:</span>
+            <span class="greytext">E-Receipt Issued: <%= trips.bookingdate %></span>
         </p>
     </div>
     <img class="seal" src="../images/seal.jpg">
 </div>
 <hr>
 <h3>Passenger</h3>
-<div class="passenger">
-    <div class="passengerleft">
+<div class="epassenger">
+    <div class="epassengerleft">
         <span class="greytext">Name</span>
         <br>
         <br>
-        Last/First
+        <%= trips.lastname %>/<%= trips.firstname %>
     </div>
-    <div class="passengerright">
+    <div class="epassengerright">
         <span class="greytext">Ticket Number</span>
         <br>
         <br>
-
+        <%= trips.airlinereference %>
     </div>
 </div>
+<br>
 <hr>
 <h3>Flights</h3>
 <div class="flights">
@@ -162,13 +165,13 @@
         <span class="greytext">Date</span>
         <br>
         <br>
-
+        <%= trips.departdate %>
     </div>
     <div class="flightscenter">
         <span class="greytext">Route</span>
         <br>
         <br>
-
+        <%= trips.departurecity %> - <%= trips.arrivalcity %>
     </div>
     <div class="flightsright">
         <span class="greytext">Class</span>
@@ -177,6 +180,7 @@
         Economy class
     </div>
 </div>
+<br>
 <hr>
 <h3>Payment Summary</h3>
 <div class="summary">
@@ -196,10 +200,27 @@
         <span class="greytext">Amount</span>
         <br>
         <br>
-
+        $<%= trips.price %>
+        <br>
+        <br>
+        $<%= trips.price*0.08 %>
+        <br>
+        <br>
+        $<%= trips.price*1.08 %>
     </div>
 </div>
-<p class="greytext">
+<br>
+<br>
+<p class="greytext" class="preceipt">
     There may be a slight discrepancy between the sum of the indiviual items and the total amount due to conversions at the exchange rate. The total amount will always prevail.
 </p>
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>

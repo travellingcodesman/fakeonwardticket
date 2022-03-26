@@ -2,7 +2,7 @@
     position: relative;
     top: 50px;
     width: 500px;
-    height: 1400px;
+    height: 500px;
     border: 1px cadetblue solid;   
     background-color: white; 
     margin: auto;
@@ -18,46 +18,178 @@
 
 .tripiata {
     display: flex;
-    margin-top: 30px;
-    border: 1px black solid;
 }
 
 .trip {
-
-    font-size: 50px;
+    font-size: 70px;
     font-family: Arial black;
     color: rgb(71, 128, 252);
-    border: 1px black solid;
-
 }
 
 .iata {
-    height: 70px;
-    width: 100px;
+    height: 90px;
+    width: 120px;
     margin-left: 0;
-    border: 1px black solid;
 }
 
 .bookingnumber {
-    padding-left : 1000px;
+    padding-left : 900px;
     top: 50px
 }
 
-#detailbox {
+.ipassenger {
+    display: flex;
+}
+
+.ipassengerleft {
+    width: 250px;
+}
+
+.ipassengerright {
+    width: 500px;
+}
+
+.detailbox {
     border: 1px solid;
 }
 
 .firstrow {
+    display: flex;
     background-color: rgb(209, 237, 241);
     border: 1px solid;
     margin-top: 0;
 }
 
+.firstrowa {
+    width: 250px
+}
+
+.firstrowb {
+    width: 500px
+}
+
+.firstrowc {
+    width: 250px
+}
+
+.firstrowd {
+    width: 250px
+}
+
+.secondsection {
+    display: flex;
+}
+
+.departarrivetime {
+    width: 250px;
+}
+
+.departarriveairport {
+    width: 500px;
+}
+
+.flightnum {
+    width: 250px;
+}
+
+.class {
+    width: 250px
+}
+
 hr {
-    border-top: 1px solid grey
+    border-top: 1px solid grey;
 }
 
 .greytext {
     color: grey;
 }
 
+.sealportion {
+    height: 170px;
+    display: inline-flex;
+}
+
+.leftofseal {
+    height: 170px;
+    width: 500px;
+}
+
+.totalprice {
+    color: rgb(71, 128, 252);
+}
+
+.inlinetop {
+    display: inline-flex;
+}
+
+.topleftofseal {
+    width: 200px;
+    height: 100px;
+}
+
+.toprightofseal {
+    height: 100px;
+    width: 300px
+}
+
+
+.seal {
+    height: 150px;
+    width: 170px;
+    margin-left: 300px;
+}
+
+.epassenger {
+    height: 50px;
+    display: flex;
+}
+
+.epassengerleft {
+    height: 50px;
+    width: 250px;
+}
+
+.epassengerright {
+    height: 50px;
+    width: 250px;
+}
+
+.flights {
+    height: 50px;
+    display: flex;
+}
+
+.flightsleft {
+    height: 50;
+    width: 250px;
+}
+
+.flightscenter {
+    height: 50;
+    width: 250px;
+}
+
+.flightsright {
+    height: 50;
+    width: 250px;
+}
+
+.summary {
+    height: 100px;
+    display: flex;
+}
+
+.summaryleft {
+    height: 100px;
+    width: 250px;
+}
+
+.summaryright {
+    height: 100px;
+    width: 250px;
+}
+
+
+.preceipt {
+    height: 50px;
+}
