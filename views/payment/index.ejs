@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="/stylesheets/payment.css">
 
 <script src="https://www.paypal.com/sdk/js?client-id=AQYN00hNnz6JCNBjU1Prt8iKkpYl5HlA_T1wjoylj8VyUunXIlkbP_g0zWIP1TR3rxamitzMTsFQh7LE&currency=USD"></script>
-<!-- <script src="/public/javascript/paypal.js" defer></script> -->
+
 
 <div class="infobox">
     <h2>Verify information here</h2>
@@ -10,30 +10,30 @@
 
 <script>
     paypal.Buttons({
-
 // Set up the transaction
-createOrder: function(data, actions) {
-    return fetch('/api/orders', {
-        method: "post",
-    }).then((response) => response.json())
-    .then((order) => order.id)
-},
-// Finalize the transaction
-onApprove: function(data, actions) {
-    return fetch(`/api/orders/${data.orderID}/capture`, {
-        method: "post",
-    }).then((response) => response.json())
-    .then(function (orderData) {
-        console.log(
-            "Capture result",
-            orderData,
-            JSON.stringify(orderData, null, 2)
-        )
-        var transaction = orderData.purchase_units[0].payments.captures[0];
-        alert('Transaction '+ transaction.status + ': ' + transaction.id + '\n\nSee console for all available details');
+        createOrder: function(data, actions) {
 
-    })
-}
+            return fetch('/api/orders', {
+                method: "post",
+            }).then((response) => response.json())
+            .then((order) => order.id)
+        },
+        // Finalize the transaction
+        onApprove: function (data, actions) {
+            return fetch(`/api/orders/${data.orderID}/capture`, {
+                method: "post",
+            }).then((response) => response.json())
+            .then(function (orderData) {
+                console.log(
+                    "Capture result",
+                    orderData,
+                    JSON.stringify(orderData, null, 2)
+                )
+                var transaction = orderData.purchase_units[0].payments.captures[0];
+                alert('Transaction '+ transaction.status + ': ' + transaction.id + '\n\nSee console for all available details');
 
-}).render('#paypal-button-container');
+            })
+        }
+
+    }).render('#paypal-button-container');
 </script>

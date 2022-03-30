@@ -5,9 +5,7 @@ if (process.env.NODE_ENV !== 'production') {
 const express = require("express")
 const app = express()
 const expressLayouts = require('express-ejs-layouts')
-const axios = require('axios')
-const fetch = require('node-fetch')
-const apiSearch = require('./public/javascript/middleware/apiSearch.js')
+const { generateAccessToken, createOrder, capturePayment } = require('../Onward_dev/public/javascript/paypal')
 
 
 const indexRouter = require('./routes/index')
@@ -17,7 +15,6 @@ const searchRouter = require('./routes/searchresults')
 const passengerRouter = require('./routes/passenger')
 const paymentRouter = require('./routes/payment')
 const confirmationRouter = require('./routes/confirmation')
-const paypalRouter = require('./routes/paypalapi')
 
 
 
@@ -46,8 +43,18 @@ app.use('/searchresults', searchRouter)
 app.use('/passenger', passengerRouter)
 app.use('/payment', paymentRouter)
 app.use('/confirmation', confirmationRouter)
-app.use('/api', paypalRouter)
 
+
+app.post('/api/orders', async (req, res) => {
+    const order = await createOrder()
+    res.json(order)
+})
+
+app.post('/api/orders/:orderID/capture', async (req, res) => {
+    const { orderID } = req.params
+    const captureData = await capturePayment(orderID)
+    res.json(captureData)
+})
 
 app.listen(process.env.PORT || 3000)
 
