@@ -1,8 +1,8 @@
 <link rel="stylesheet" href="/stylesheets/confirmation.css">
 
 <div class="infobox">
-    <%= trips[0] %> 
-    <% trips = trips[0] %> 
+    <%= trip %> 
+
 </div>
 
 
@@ -11,15 +11,14 @@
         <span class="trip">Trip</span>
         <img class="iata" src="../images/iata.png">
         <div class="bookingnumber">
-            <span class="greytext">Booking No. <%= trips.bookingnumber %> </span> 
+            <span class="greytext">Booking No. <%= trip.bookingnumber %> </span> 
             <br> 
-            <span class="greytext">Booked on: <%= trips.bookingdate %></span> 
+            <span class="greytext">Booked on: <%= trip.bookingdate %></span> 
         </div>
     </div>
 </div>
 <h2>Itinerary</h2>
-<h3>(Airline Booking Reference: <%= trips.airlinereference %>)</h3>
-<br>
+<h3>(Airline Booking Reference: <%= trip.airlinereference %>)</h3>
 <p>We advise you print out your itinerary and take it with you to ensure your trip goes as smoothly as possible.</p>
 <hr>
 <div class="ipassenger">
@@ -27,7 +26,7 @@
         <h3>Passengers</h3>
         <span class="greytext">Name</span>
         <br>
-        <span> <%= trips.lastname %>/<%= trips.firstname %>  </span>        
+        <span> <%= trip.lastname %>/<%= trip.firstname %>  </span>        
     </div>
     <div class="ipassengerright">
         <br>
@@ -35,7 +34,7 @@
         <br>
         <span class="greytext">Ticket Number</span>
         <br>
-        <%= trips.airlinereference %>
+        <%= trip.airlinereference %>
     </div>
 </div>
 <br>
@@ -50,17 +49,17 @@
     </p>
     <div class="secondsection">
         <div class="departarrivetime">
-            <span><%= trips.departtime %> , <%= trips.departdate %> </span>
+            <span><%= trip.departtime %>, <%= trip.departdate %> </span>
             <br>
-            <span> <%= trips.arrivetime %> , <%= trips.arrivedate %></span>
+            <span> <%= trip.arrivetime %>, <%= trip.arrivedate %></span>
         </div>
         <div class="departarriveairport">
-            <span><%= trips.departurecity %> (<%= trips.departurecode %>) </span>
+            <span><%= trip.departurecity %> (<%= trip.departurecode %>) </span>
             <br>
-            <span><%= trips.airline %>  <%= trips.flightnumber %> </span>
+            <span><%= trip.arrivalcity %> (<%= trip.arrivalcode %>) </span>
         </div>
         <div class="flightnum">
-            <span> <%= trips.arrivalcity %> (<%= trips.arrivalcode %>)   </span>            
+            <span><%= trip.airline %>  <%= trip.flightnumber %> </span>            
         </div>
         <div class="class">
             <span>Economy</span>
@@ -71,7 +70,7 @@
     <span>Baggage Allowance</span>
     <br>
     <br>
-    <span class="greytext">[Checked Baggage]</span> No free baggage allowance.Please contact the airline for detailed baggage regulations.
+    <span class="greytext">[Checked Baggage]</span> No free baggage allowance. Please contact the airline for detailed baggage regulations.
     <br>
     <span class="greytext">[Carry-on Baggage]</span> 1 piece(s) per person. 7kg each piece. Each piece cannot exceed 56*36*23CM in size.
 </div>
@@ -102,14 +101,14 @@
         <span class="trip">Trip</span>
         <img class="iata" src="../images/iata.png">
         <div class="bookingnumber">
-            <span class="greytext">Booking No. <%= trips.bookingnumber %></span>
+            <span class="greytext">Booking No. <%= trip.bookingnumber %></span>
             <br> 
-            <span class="greytext">Booked on: <%= trips.bookingdate %></span>
+            <span class="greytext">Booked on: <%= trip.bookingdate %></span>
         </div>
     </div>
 </div>
 <h2>E-Receipt</h2>
-<h3>(Airline Booking Reference: <%= trips.airlinereference %>)</h3>
+<h3>(Airline Booking Reference: <%= trip.airlinereference %>)</h3>
 <div class="sealportion">
     <div class="leftofseal">
         <div class="inlinetop">
@@ -123,7 +122,7 @@
                 Payment method
             </div>
             <div class="toprightofseal">
-                Total <span class="totalprice">$<%= trips.price*1.08 %><span class="greytext"> (taxes and fees included)</span></span>
+                Total <span class="totalprice">$<%= trip.price*1.08 %><span class="greytext"> (taxes and fees included)</span></span>
                 <br>
                 <br>
                 Flights
@@ -133,10 +132,10 @@
             </div>
         </div>
         <p>
-            <span class="greytext">Payment Received: <%= trips.bookingdate %></span>
+            <span class="greytext">Payment Received: <%= trip.bookingdate %></span>
             <br>
             <br>
-            <span class="greytext">E-Receipt Issued: <%= trips.bookingdate %></span>
+            <span class="greytext">E-Receipt Issued: <%= trip.bookingdate %></span>
         </p>
     </div>
     <img class="seal" src="../images/seal.jpg">
@@ -148,13 +147,13 @@
         <span class="greytext">Name</span>
         <br>
         <br>
-        <%= trips.lastname %>/<%= trips.firstname %>
+        <%= trip.lastname %>/<%= trip.firstname %>
     </div>
     <div class="epassengerright">
         <span class="greytext">Ticket Number</span>
         <br>
         <br>
-        <%= trips.airlinereference %>
+        <%= trip.airlinereference %>
     </div>
 </div>
 <br>
@@ -165,13 +164,13 @@
         <span class="greytext">Date</span>
         <br>
         <br>
-        <%= trips.departdate %>
+        <%= trip.departdate %>
     </div>
     <div class="flightscenter">
         <span class="greytext">Route</span>
         <br>
         <br>
-        <%= trips.departurecity %> - <%= trips.arrivalcity %>
+        <%= trip.departurecity %> - <%= trip.arrivalcity %>
     </div>
     <div class="flightsright">
         <span class="greytext">Class</span>
@@ -200,13 +199,13 @@
         <span class="greytext">Amount</span>
         <br>
         <br>
-        $<%= trips.price %>
+        $<%= trip.price %>
         <br>
         <br>
-        $<%= trips.price*0.08 %>
+        $<%= trip.price*0.08 %>
         <br>
         <br>
-        $<%= trips.price*1.08 %>
+        $<%= trip.price*1.08 %>
     </div>
 </div>
 <br>

@@ -76,6 +76,14 @@ const tripSchema = new mongoose.Schema({
     airlinereference: {
         type: String,
         required: true
+    },
+    paid: {
+        type: Boolean,
+        required: true,
+    },
+    paypalid: {
+        type: String,
+        required: false
     }
 })
 

@@ -24,7 +24,9 @@ app.set('layout', 'layouts/layout')
 app.use(expressLayouts)
 app.use(express.static('public'))
 
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
+const Trip = require('./models/trip');
+const { response } = require('express');
 mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true })
 
 const db = mongoose.connection
@@ -55,6 +57,7 @@ app.post('/api/orders/:orderID/capture', async (req, res) => {
     const captureData = await capturePayment(orderID)
     res.json(captureData)
 })
+
 
 app.listen(process.env.PORT || 3000)
 

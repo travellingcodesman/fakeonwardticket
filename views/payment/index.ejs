@@ -9,6 +9,7 @@
 </div>
 
 <script>
+
     paypal.Buttons({
 // Set up the transaction
         createOrder: function(data, actions) {
@@ -29,11 +30,12 @@
                     orderData,
                     JSON.stringify(orderData, null, 2)
                 )
-                var transaction = orderData.purchase_units[0].payments.captures[0];
-                alert('Transaction '+ transaction.status + ': ' + transaction.id + '\n\nSee console for all available details');
-
+                var transaction = orderData.purchase_units[0].payments.captures[0]
+                // alert('Transaction '+ transaction.status + ': ' + transaction.id + '\n\nSee console for all available details');
+                window.location.href = '/confirmation/<%= newtrip.bookingnumber %>'
             })
         }
-
+        
     }).render('#paypal-button-container');
+
 </script>

@@ -1,17 +1,20 @@
 const express = require('express')
-const Trip = require('../models/trip')
 const router = express.Router()
-const mongoose = require('mongoose')
+const Trip = require('../models/trip')
 
 //Confirmation page
-router.get('/', async (req, res) => {
-    try {
-        const trips = await Trip.find( {firstname: "Jane"} )
-        res.render('confirmation/index', { trips: trips})
-    } catch {
-        res.redirect('/')
-    }
 
+router.get('/:bookingnumber', async (req, res) => {
+    let bookingnumber = req.params.bookingnumber
+    let trip = await Trip.find( {bookingnumber: bookingnumber} )
+    trip = trip[0]
+    try {
+        res.render('confirmation/index', { trip: trip} )
+    } catch {
+        res.render('/index', {
+            errorMessage: 'Unsuccessful'
+        })
+    }
 })
 
 module.exports = router

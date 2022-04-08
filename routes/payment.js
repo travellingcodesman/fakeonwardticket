@@ -10,6 +10,7 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', async (req, res) => {
+    bookingnumber = Math.floor(Math.random() * 100000000000)
     const trip = new Trip({
             firstname: req.body.firstname,
             lastname: req.body.lastname,
@@ -27,13 +28,14 @@ router.post('/', async (req, res) => {
             airline: req.body.airline,
             flightnumber: req.body.flightnumber,
             price: req.body.price,
-            bookingnumber: Math.floor(Math.random() * 100000000000),
-            airlinereference: randbookrefer()
+            bookingnumber: bookingnumber,
+            airlinereference: randbookrefer(),
+            paid: false
         })
 
         try {
             const newtrip = await trip.save()
-            res.render('payment/index', { paypalClientId: process.env.PAYPAL_CLIENT_ID})
+            res.render('payment/index', { newtrip: newtrip })
                 
         } catch {
             res.render('/index', {
