@@ -32,7 +32,7 @@
                 )
                 var transaction = orderData.purchase_units[0].payments.captures[0]
                 // alert('Transaction '+ transaction.status + ': ' + transaction.id + '\n\nSee console for all available details');
-                window.location.href = '/confirmation/<%= newtrip.bookingnumber %>'
+                window.location.href = '/confirmation/' + transaction.status + '/<%= newtrip.bookingnumber %>/' + transaction.id
             })
         }
         

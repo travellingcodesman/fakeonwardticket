@@ -6,7 +6,7 @@ const express = require("express")
 const app = express()
 const expressLayouts = require('express-ejs-layouts')
 const { generateAccessToken, createOrder, capturePayment } = require('../Onward_dev/public/javascript/paypal')
-
+const methodOverride = require('method-override')
 
 const indexRouter = require('./routes/index')
 const termsRouter = require('./routes/terms')
@@ -15,6 +15,7 @@ const searchRouter = require('./routes/searchresults')
 const passengerRouter = require('./routes/passenger')
 const paymentRouter = require('./routes/payment')
 const confirmationRouter = require('./routes/confirmation')
+const printRouter = require('./routes/print')
 
 
 
@@ -22,6 +23,7 @@ app.set('view engine', 'ejs')
 app.set('views', __dirname + '/views')
 app.set('layout', 'layouts/layout')
 app.use(expressLayouts)
+app.use(methodOverride('_method'))
 app.use(express.static('public'))
 
 const mongoose = require('mongoose');
@@ -45,6 +47,7 @@ app.use('/searchresults', searchRouter)
 app.use('/passenger', passengerRouter)
 app.use('/payment', paymentRouter)
 app.use('/confirmation', confirmationRouter)
+app.use('/print', printRouter)
 
 
 app.post('/api/orders', async (req, res) => {

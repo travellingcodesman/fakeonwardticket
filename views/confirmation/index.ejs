@@ -2,14 +2,16 @@
 
 <div class="infobox">
     <%= trip %> 
-
+    <form action="/print/<%= trip.bookingnumber %>?_method=PUT" method="POST">
+        <button type="submit">Print</button>
+    </form>
 </div>
 
 
 <div class="toprow">
     <div class="tripiata">
         <span class="trip">Trip</span>
-        <img class="iata" src="../images/iata.png">
+        <img class="iata" src="/images/iata.png">
         <div class="bookingnumber">
             <span class="greytext">Booking No. <%= trip.bookingnumber %> </span> 
             <br> 
@@ -99,7 +101,7 @@
 <div class="toprow">
     <div class="tripiata">
         <span class="trip">Trip</span>
-        <img class="iata" src="../images/iata.png">
+        <img class="iata" src="/images/iata.png">
         <div class="bookingnumber">
             <span class="greytext">Booking No. <%= trip.bookingnumber %></span>
             <br> 
@@ -122,7 +124,7 @@
                 Payment method
             </div>
             <div class="toprightofseal">
-                Total <span class="totalprice">$<%= trip.price*1.08 %><span class="greytext"> (taxes and fees included)</span></span>
+                Total <span class="totalprice">$<%= Math.round(trip.price*1.08 * 100) / 100 %><span class="greytext"> (taxes and fees included)</span></span>
                 <br>
                 <br>
                 Flights
@@ -138,7 +140,7 @@
             <span class="greytext">E-Receipt Issued: <%= trip.bookingdate %></span>
         </p>
     </div>
-    <img class="seal" src="../images/seal.jpg">
+    <img class="seal" src="/images/seal.jpg">
 </div>
 <hr>
 <h3>Passenger</h3>
@@ -199,13 +201,13 @@
         <span class="greytext">Amount</span>
         <br>
         <br>
-        $<%= trip.price %>
+        $<%= Math.round(trip.price * 100) / 100 %>
         <br>
         <br>
-        $<%= trip.price*0.08 %>
+        $<%= Math.round(trip.price*0.08 * 100) / 100 %>
         <br>
         <br>
-        $<%= trip.price*1.08 %>
+        $<%= Math.round(trip.price*1.08 * 100) / 100 %>
     </div>
 </div>
 <br>
