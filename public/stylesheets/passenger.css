@@ -37,12 +37,10 @@ input[type=text] {
     font-size: 15px;
 }
 
-input[type=text]:hover {
-    border: 3px solid cadetblue;
-}
 
 input[type=text]:focus {
     outline: none;
+    border: 3px solid cadetblue;
 }
 
 
@@ -55,12 +53,10 @@ input[type=email] {
     font-size: 15px;
 }
 
-input[type=email]:hover {
-    border: 3px solid cadetblue;
-}
 
 input[type=email]:focus {
     outline:none;
+    border: 3px solid cadetblue;
 }
 
 select {
@@ -72,12 +68,9 @@ select {
     font-size: 15px;
 }
 
-select:hover {
-    border: 3px solid cadetblue;
-}
-
 select:focus {
     outline: none;
+    border: 3px solid cadetblue;
 }
 
 .hidden {

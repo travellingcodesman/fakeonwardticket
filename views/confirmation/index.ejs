@@ -2,7 +2,7 @@
 
 <div class="infobox">
     <%= trip %> 
-    <form action="/print/<%= trip.bookingnumber %>?_method=PUT" method="POST">
+    <form action="/confirmation/<%= status %>/<%= trip.id %>/<%= trip.bookingnumber %>?_method=PUT" method="POST">
         <button type="submit">Print</button>
     </form>
 </div>

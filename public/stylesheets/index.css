@@ -57,13 +57,10 @@ input[type=text] {
     font-size: 15px;
 }
 
-input[type=text]:hover {
-    border: 3px solid cadetblue;
-
-}
 
 input[type=text]:focus {
     outline: none;
+    border: 3px solid cadetblue;
 }
 
 ul {
@@ -117,12 +114,10 @@ input[type=date] {
     text-transform: uppercase;
 }
 
-input[type=date]:hover {
-    border: 3px solid cadetblue;
-}
 
 input[type=date]:focus {
     outline: none;
+    border: 3px solid cadetblue;
 }
 
 button {

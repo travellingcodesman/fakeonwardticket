@@ -4,12 +4,11 @@ const Trip = require('../models/trip')
 
 //Confirmation page
 
-router.get('/:paid/:bookingnumber/:paypalid', async (req, res) => {
-    let bookingnumber = req.params.bookingnumber
-    let trip = await Trip.find( {bookingnumber: bookingnumber} )
-    trip = trip[0]
+router.get('/:status/:id/:paypalid', async (req, res) => {
+    let trip = await Trip.findById(req.params.id)
+    console.log(trip)
     try {
-        res.render('confirmation/index', { trip: trip} )
+        res.render('confirmation/index', { trip: trip, status: req.params.status} )
     } catch {
         res.render('/index', {
             errorMessage: 'Unsuccessful'
@@ -17,14 +16,17 @@ router.get('/:paid/:bookingnumber/:paypalid', async (req, res) => {
     }
 })
 
-router.put('/:paid/:bookingnumber/:paypalid', async (req, res) => {
+router.put('/:status/:id/:paypalid', async (req, res) => {
     let trip
     try {
-        trip = await Trip.find( {bookingnumber: req.params.bookingnumber} )
+        trip = await Trip.findById(req.params.id)
         trip.paypalid = req.params.paypalid
-        trip.paid = req.params.paid
+        if (req.params.status == 'COMPLETED') {
+            trip.paid = true
+        }
         await trip.save()
-        res.render('confirmation/index', { trip: trip} )
+        console.log(trip)
+        res.render('confirmation/index', { trip: trip, status: req.params.status} )
     } catch {
         res.render('/index', {
             errorMessage: 'Unsuccessful'
